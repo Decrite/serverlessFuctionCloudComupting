@@ -1,8 +1,7 @@
 const { app } = require("@azure/functions");
 const { MongoClient } = require("mongodb");
 const { v4: uuidv4 } = require("uuid");
-const url =
-"mongodb://{url}"
+const url = process.env.DB_CONNECTIONSTRING
 
 const client = new MongoClient(url);
 
