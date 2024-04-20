@@ -2,7 +2,8 @@ const { app } = require("@azure/functions");
 const { MongoClient } = require("mongodb");
 const { v4: uuidv4 } = require("uuid");
 const url =
-  "mongodb://prof-rating:lHDOsx3Uwn24FYe05It204icticVwz8ikp894GB9bFamUgW5fDIX2b3KR6887avNcYOn3yioZIDYACDb8evVRw==@prof-rating.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@prof-rating@";
+"mongodb://{url}"
+
 const client = new MongoClient(url);
 
 app.http("get-prof", {
