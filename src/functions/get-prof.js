@@ -11,7 +11,7 @@ app.http("get-prof", {
   authLevel: "anonymous",
   route: "prof/{id}",
   handler: async (request, context) => {
-    //test
+
     await client.connect();
     const database = client.db("prof");
     const collection = database.collection("collection1");
